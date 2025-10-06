@@ -82,8 +82,9 @@
             // 
             // rbOrdinario
             // 
+            this.rbOrdinario.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDownGrid;
             this.rbOrdinario.AutoSize = true;
-            this.rbOrdinario.Location = new System.Drawing.Point(115, 310);
+            this.rbOrdinario.Location = new System.Drawing.Point(126, 313);
             this.rbOrdinario.Name = "rbOrdinario";
             this.rbOrdinario.Size = new System.Drawing.Size(98, 24);
             this.rbOrdinario.TabIndex = 6;
@@ -94,7 +95,7 @@
             // rbUrgente
             // 
             this.rbUrgente.AutoSize = true;
-            this.rbUrgente.Location = new System.Drawing.Point(269, 310);
+            this.rbUrgente.Location = new System.Drawing.Point(262, 313);
             this.rbUrgente.Name = "rbUrgente";
             this.rbUrgente.Size = new System.Drawing.Size(92, 24);
             this.rbUrgente.TabIndex = 7;
