@@ -86,10 +86,10 @@
             this.rbOrdinario.AutoSize = true;
             this.rbOrdinario.Location = new System.Drawing.Point(126, 313);
             this.rbOrdinario.Name = "rbOrdinario";
-            this.rbOrdinario.Size = new System.Drawing.Size(95, 24);
+            this.rbOrdinario.Size = new System.Drawing.Size(98, 24);
             this.rbOrdinario.TabIndex = 6;
             this.rbOrdinario.TabStop = true;
-            this.rbOrdinario.Text = "ordinario";
+            this.rbOrdinario.Text = "Ordinario";
             this.rbOrdinario.UseVisualStyleBackColor = true;
             // 
             // rbUrgente
@@ -97,10 +97,10 @@
             this.rbUrgente.AutoSize = true;
             this.rbUrgente.Location = new System.Drawing.Point(262, 313);
             this.rbUrgente.Name = "rbUrgente";
-            this.rbUrgente.Size = new System.Drawing.Size(89, 24);
+            this.rbUrgente.Size = new System.Drawing.Size(92, 24);
             this.rbUrgente.TabIndex = 7;
             this.rbUrgente.TabStop = true;
-            this.rbUrgente.Text = "urgente";
+            this.rbUrgente.Text = "Urgente";
             this.rbUrgente.UseVisualStyleBackColor = true;
             // 
             // Form1
