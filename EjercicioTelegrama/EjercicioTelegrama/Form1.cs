@@ -20,32 +20,46 @@ namespace EjercicioTelegrama
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
-            int numPalabras = 0;
+            char tipoTelegrama;
+            int numPalabras;
             double coste;
 
-            //Leo el telegrama 
-            textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente?
+            // Leo el telegrama
+            textoTelegrama = txtTelegrama.Text.Trim();
+
+            // Telegrama urgente?
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
-            //Obtengo el número de palabras que forma el telegrama numPalabras = textoTelegrama.Length;
-            //Si el telegrama es ordinario
+            else
+                tipoTelegrama = 'o';
+
+            // Obtengo el número de palabras que forma el telegrama
+            // (Separamos por espacios y contamos las palabras)
+            numPalabras = textoTelegrama.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries).Length;
+
+            // Calculo el coste según el tipo
             if (tipoTelegrama == 'o')
+            {
+                // Ordinario
                 if (numPalabras <= 10)
                     coste = 25;
                 else
-                    coste = 0.5 * numPalabras;
-            else
-            //Si el telegrama es urgente
-            if (tipoTelegrama == 'u')
+                    coste = 25 + 0.5 * (numPalabras - 10);
+            }
+            else if (tipoTelegrama == 'u')
+            {
+                // Urgente
                 if (numPalabras <= 10)
                     coste = 5;
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
+            }
             else
+            {
                 coste = 0;
-            txtPrecio.Text = coste.ToString() + " euros";
+            }
+
+            // Muestro el precio
+            txtPrecio.Text = coste.ToString("0.00") + " euros";
         }
-    }
 }
