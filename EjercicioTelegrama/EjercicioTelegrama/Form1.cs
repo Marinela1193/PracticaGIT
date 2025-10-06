@@ -28,13 +28,14 @@ namespace EjercicioTelegrama
             textoTelegrama = txtTelegrama.Text.Trim();
 
             // Telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rbUrgente.Checked)
                 tipoTelegrama = 'u';
-            else
+            else if (rbOrdinario.Checked)
                 tipoTelegrama = 'o';
+            else
+                tipoTelegrama = ' '; // Ninguno seleccionado
 
             // Obtengo el número de palabras que forma el telegrama
-            // (Separamos por espacios y contamos las palabras)
             numPalabras = textoTelegrama.Split(' ', (char)StringSplitOptions.RemoveEmptyEntries).Length;
 
             // Calculo el coste según el tipo
